@@ -1,0 +1,89 @@
+<SKIN_head>
+<HTML>
+<HEAD>
+<TITLE>
+([HTMLTITLE])
+</title>
+<style type="text/css">
+<!--
+body, td, div, p     { font-family: helvetica, sans serif; font-size:1em; }
+tt, pre      { font-family: fixed, monaco, lucida sans, monospace; font-size:0.9em; }
+input, select, textarea { 
+background:#dee3ed; border-style:solid; border-color:#336699; border-width:1; color:#003366}
+a            { font-weight:bold; text-decoration:none }
+a:hover      { color:#663300; background:#FFFF99; }
+ul           { margin-top: 0px; }
+.titre      { color: #000000; font-size:1.2em; font-weight: bold; padding: 10 0 0 30; }
+.sstitre    { color: #336699; font-size:1em; font-weight: bold; padding: 0 0 20 30; }
+.flag       { color:#000000; font-size:0.8em; }
+.menu       { color:#224466; font-size:0.8em; }
+.bmenu      { color:#000000; font-size:0.8em; }
+.dot        { color:#99CCFF; font-size:0.8em; }
+.bodyl      { text-align: left; padding: 0 50 0 30;}
+-->
+</STYLE>
+<META name=keywords content="([MOTSCLE])">
+<META name=keywords content="([DESCRIPTION])">
+</HEAD>
+<BODY bgcolor=#e4e4e4 topmargin=0 leftmargin=0 marginwidth=0 marginheight=0> 
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td align=left valign=bottom><b>([site])</b><br></td>
+<td align="right" valign=bottom>
+<div class=flag>([lnav])</div>
+</td></tr></table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td bgcolor=#333333>([vide1x1])</td></tr>
+<tr><td bgcolor=#cccccc>([vide1x3])</td></tr></table>
+<table width=100% cellpadding=5 cellspacing=0 border=0 height=400>
+<tr>
+<td width=120 valign=top bgcolor=#ffffff>
+([_nav.nav])
+</td>
+<td width=100% valign=top bgcolor=#ffffff>
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+<tr><td valign=top>
+</SKIN_head>
+<SKIN_headerror>
+<html>
+<body bgcolor=#000000 text=#FFFFFF link=#FFFF00 vlink=#CCCC00>
+</SKIN_headerror>
+<SKIN_dnav>
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor=#99CCFF><IMG SRC=/img/0.png ALT='' WIDTH=1 HEIGHT=1 HSPACE=34 VSPACE=0 BORDER=0 ALIGN=top></td></tr>
+</table>
+<table width=100% cellpadding=1 cellspacing=0 border=0>
+<tr><td align=right bgcolor=#6699CC><div class=flag>&nbsp;([dtitle])&nbsp;</font></td></tr></table>
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor=#336699><IMG SRC="/img/0.png" ALT="" WIDTH="1" HEIGHT="1" HSPACE="34" VSPACE="0" BORDER="0"
+ALIGN="top"></td></tr>
+</table>
+</SKIN_dnav>
+<SKIN_nav>
+<a href=([urlnav]) class=menu>&nbsp;([labelnav])&nbsp;</a><br>
+</SKIN_nav>
+<SKIN_navon>
+<a href=([urlnav]) class=bmenu>&nbsp;([labelnav])&nbsp;</a><b class=flag>&nbsp;&lt;-</b><br>
+</SKIN_navon>
+<SKIN_lang>
+<a href=([urlpage]) class=flag><img src=/img/([lg]).png width=18 height=9 hspace=0 vspace=6  border=1></a><img 
+alt='' src=/img/0.png width=1 height=1 hspace=10 vspace=0  border=0>
+</SKIN_lang>
+<SKIN_langon>
+<img src="/img/([lg]).png" width=26 height=17 hspace=0 vspace=6  alt=([lg]) border=1><img 
+alt='' src=/img/0.png width=1 height=1 hspace=10 vspace=6  border=0>
+</SKIN_langon>
+<SKIN_show>
+<div class=titre>([TITRE])</div>
+<div class=sstitre>([CHAPEAU])</div>
+<div class=bodyl>([CONTENU])</div>
+</SKIN_show>
+<SKIN_foot>
+</td></tr></table></td></tr></table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td bgcolor=#333333><img src=/img/0.png width=1 height=1 hspace=0 vspace=0 border=0 alt=""></td></tr></table>
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor=#d9d9d9>&nbsp;<a href="http://([adminurl])" class=flag target=edit>&nbsp;ADMIN&nbsp;</a></td>
+<td align=right bgcolor=#d9d9d9><a href="mailto:contact@([maildomain])" class=flag>&nbsp;concierge&nbsp;</a>&nbsp;</td></tr>
+</table><br><br><br><br><br><br><br><br>
+</body></html>
+</SKIN_foot>

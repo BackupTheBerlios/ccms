@@ -1,0 +1,22 @@
+
+<TITRE>
+Horizontal Line
+</TITRE>
+<REGEXP>
+\n----\r
+</REGEXP>
+<OUTPUT>
+\n<table width=100% cellspacing=0 cellpadding=0 border=0><tr><td bgcolor=#00A0C6><img src=img/0.png alt='' width=1 height=1 vspace=0 hspace=0 border=0></td></tr></table>\n
+</OUTPUT>
+<EXAMPLE>
+----
+</EXAMPLE>
+<DESCRITION>
+Séparateur horizontal coloré de la largeur de la page
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

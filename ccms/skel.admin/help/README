@@ -1,0 +1,44 @@
+# $Id: README,v 1.1 2003/09/17 12:40:50 terraces Exp $
+# Copyright (C) 2001,2002, Makina Corpus, http://makinacorpus.org
+# This file is a component of CCMS <http://makinacorpus.org/index.php/ccms>
+# Created and maintained by mose <mose@makinacorpus.org>
+# Released under GPL version 2 or later, see LICENSE file
+# or http://www.gnu.org/copyleft/gpl.html
+
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+ C C M S   README 
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+
+22/08/2001:22:01 ¤ moz ¤ version 0.8 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+
+Le README sera au final rédigé en anglais, mais ce sera pour 
+l'instant un document de travail interne pour collecter informations
+et documentations au fur et a mesure de l'apprentissage de l'outil.
+
+
+23/08/2001:14:29 ¤ moz ¤ Nomenclature de variables ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+
+$g_*     : variables 'globales' definies par l'environnement
+$cm_*    : variables 'locales' definies par la configuration
+$loc_*   : variables 'linguistiques' (fichier conf/lang)
+$page[*] : variables 'éditoriales' (issu du xml)
+
+Les variables globales sont definies dans inc/urlscan.php et dans inc/lang.php
+(qui devrait etre renommé inc/conf.php).
+
+Les locales sont definies par des fichiers de conf parsés.
+Par exemple dans data/jipi/fr/conf/local la ligne:
+test:::valeur quelconque
+initialise la variable 
+$cm_test = "valeur quelconque";
+Certaines de ces variables sont fixes dans lang.php mais sont vouées a etre 
+tranformées en g_*
+
+Les linguistiques sont definies comme les locales, par parsing du fichier 
+data/domain/lang/conf/lang
+
+Les éditoriales stockent le contenu du document parsé pour 
+composer la page, dans un array associatif dont la clé est le tag xml parsé
+par exemple si le fichier contenu contient <TITRE>haha</TITRE>
+la variable sera fixée a $page[TITRE] = "haha";
+

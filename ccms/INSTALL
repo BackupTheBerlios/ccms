@@ -1,0 +1,58 @@
+CCMS: installation
+------------------------------------------------------------------
+$Id: INSTALL,v 1.1 2003/09/17 12:40:42 terraces Exp $
+Copyright (C) 2001, Makina Corpus, http://makinacorpus.org
+Created and maintained by mose <mose@makinacorpus.org>
+Released under GPL version 2 or later, see LICENSE file
+or http://www.gnu.org/copyleft/gpl.html
+------------------------------------------------------------------
+
+System requirements:
+--------------------
+- Linux or bsd (won't work on win)
+- Apache
+- PHP4
+- Perl5
+- php_ldap if you use LDAP user management
+- php_mysql for mysql users backend
+- nothing for flat file user storage
+
+Step by step installation:
+--------------------------
+# Get the source tarbal
+wget http://makina-corpus.org/docs/ccms_0.2b1.tar.gz
+
+# Copy the archive into a directory accessible by your web server
+cp ccms_0.2b1.tar.gz /var/www/
+
+# Decompress the archive in your working directory
+tar xzvf ccms_0.2b1.tar.gz
+
+# Go into extracted directory and read the most you can
+# (README, LICENSE, etc...)
+cd ccms_0.2b1
+
+# Launch a web browser on the current directory
+# Be sure that your web server can write onto this directory
+# (probably need to use 'chown -R www-cata:www-data ccms_0.2b1')
+http://localhost/ccms_0.2b1/
+
+# Complete the HTML forms and validate to install the CCMS.
+# You may be asked to include some apache directives, that
+# sould be done as root.
+# If you want an advanced configuration, you can edit some vars
+# in index.php
+
+# Read the installer output and restart your web server after including the 
+# conf files.
+
+# Then you can point your web browser to the url you have setup in
+# config file, and begin to work.
+
+
+Most frequent problems:
+-----------------------
+
+(that part will be written later, just report to mose@makinacorpus.org
+if you have any constructive feedback).
+

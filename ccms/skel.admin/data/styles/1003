@@ -1,0 +1,22 @@
+<TITRE>
+Form Input Text
+</TITRE>
+<REGEXP>
+\((o?)--[[:space:]]*([^=-]*)(=?([^-]*)?)[[:space:]]*-([0-9]*)-\)
+</REGEXP>
+<OUTPUT>
+<tr><td><b class=good\\1>\\2</b><br></td><td><input type=text name=\"out\\1['\\2']\" value=\"\\4\" size=\"\\5\"></td></tr>\n
+</OUTPUT>
+<EXAMPLE>
+(-- Quelque chose --)
+(o-- Quelque chose = valeur par défaut -42-)
+</EXAMPLE>
+<DESCRITION>
+Champs texte simple, ou obligatoire, avec une valeur par defaut, et une longueur (en caractères)
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

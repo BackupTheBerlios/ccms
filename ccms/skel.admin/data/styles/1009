@@ -1,0 +1,22 @@
+
+<TITRE>
+Form Input Option
+</TITRE>
+<REGEXP>
+\{=-[[:space:]]*([^-]*)[[:space:]]*-([^=]*)=\}
+</REGEXP>
+<OUTPUT>
+<option value=\"\\2\"> \\1
+</OUTPUT>
+<EXAMPLE>
+{=- element -=}
+</EXAMPLE>
+<DESCRITION>
+Element de menu déroulant
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

@@ -1,0 +1,22 @@
+
+<TITRE>
+Form Close & Submit
+</TITRE>
+<REGEXP>
+\n/-{2,}/
+</REGEXP>
+<OUTPUT>
+<tr><td></td><td><input type=reset value='$cm_startover'>&nbsp;<input type=submit value='$cm_send'></td></tr></table></form>
+</OUTPUT>
+<EXAMPLE>
+/----/
+</EXAMPLE>
+<DESCRITION>
+Boutons de validation et fin de formulaire, important pour fermer le tableau
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

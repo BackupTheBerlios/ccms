@@ -1,0 +1,22 @@
+
+<TITRE>
+Table start
+</TITRE>
+<REGEXP>
+%{
+</REGEXP>
+<OUTPUT>
+<table width=100% cellspacing=0 cellpadding=0 border=0><tr><td valign=top>
+</OUTPUT>
+<EXAMPLE>
+%{
+</EXAMPLE>
+<DESCRITION>
+Début de tableau a colonnes
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

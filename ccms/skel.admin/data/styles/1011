@@ -1,0 +1,22 @@
+
+<TITRE>
+Form Input Select Close
+</TITRE>
+<REGEXP>
+\{====\}
+</REGEXP>
+<OUTPUT>
+</select></td></tr>\n
+</OUTPUT>
+<EXAMPLE>
+{====}
+</EXAMPLE>
+<DESCRITION>
+Fin de menu déroulant
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

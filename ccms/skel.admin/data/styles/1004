@@ -1,0 +1,22 @@
+<TITRE>
+Form Textarea
+</TITRE>
+<REGEXP>
+\[(o?)--[[:space:]]*([-_a-zA-Z ]*)=?([^[:space:]]*)?[[:space:]]*-(([0-9]*)/([0-9]*))?-\]
+</REGEXP>
+<OUTPUT>
+<tr><td valign=top><b class=good\\1>\\2</b><br></td><td><textarea name=\"out\\1['\\2']\" cols=\\5 rows=\\6>\\3</textarea></td></tr>\n
+</OUTPUT>
+<EXAMPLE>
+[-- Zone de saisie --]
+[o-- Zone de saisie = texte par défaut -42/8-]
+</EXAMPLE>
+<DESCRITION>
+Zone de saisie de type textarea simple, ou obligatoire, avec valeur par défaut, sur 42 colonnes et 8 rangées
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

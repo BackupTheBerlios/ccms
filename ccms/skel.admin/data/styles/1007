@@ -1,0 +1,21 @@
+<TITRE>
+Form Input Radio Checked
+</TITRE>
+<REGEXP>
+\{(o?)-\*-[[:space:]]*([-_a-zA-Z]*)=?([^[:space:]]*)?[[:space:]]*-([^-]*)-\}
+</REGEXP>
+<OUTPUT>
+<tr><td></td><td><input type=radio name=\"out\\1['\\2']\" value=\"\\4\" checked>\\3<br></td></tr>\n
+</OUTPUT>
+<EXAMPLE>
+{-*- vote 1 = une question --}
+</EXAMPLE>
+<DESCRITION>
+Champs radio coché par défaut
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

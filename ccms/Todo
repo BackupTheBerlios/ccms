@@ -1,0 +1,54 @@
+CCMS: ToDo list
+------------------------------------------------------------------
+$Id: Todo,v 1.1 2003/09/17 12:40:44 terraces Exp $
+Copyright (C) 2001, Makina Corpus, http://makinacorpus.org
+Created and maintained by mose <mose@makinacorpus.org>
+Released under GPL version 2 or later see LICENSE file
+or http://www.gnu.org/copyleft/gpl.html
+------------------------------------------------------------------
+
+- Adding default pages in several languages
+
+- Ability to add admin users via web interface ?
+
+- real-XML compliant
+
+- using XSLT instead of skins 
+ -> means that skins will become XSLT stylesheets
+
+- make template, a special inc/display_search.php can be necessary.
+*    the templating system has changed a little, maybe we should have an eye on it.
+
+- make help page modifiable by a web interface (when within template system)
+*    too much a good idea !
+
+- make users.php use skin/admin templates as well
+*    humm.. i don't really know if it is useful...
+
+- include the javascript editing tricks for rich text made by ramzi in files.
+*   still pending. will become urging when we attack the admin part deeper.
+
+- check the cWriter for including functionnal modules in the backoffice for
+  the collaborative side of that tool.
+
+- make the files.php menu expandable at wish (suggested by jjh).
+  we can use our php session to store that display feature.
+*    I found a place where it works like that: nexen php documentation
+*    is an expandable menu with cookies. we need that stuff !
+
+- add attributes in users.php for personnal information (phone, email, etc. )
+  (best option will be to get a popup window zoom each entry).
+···· project split: LuDAP version 0.1 will manage LDAP entries
+*    follow ludap project especially about group implementation,
+*    that will involve patching auth.php to fit to new architecture
+
+- insert comments inside the code. I hope Ramzi will be able to help in it.
+···· in progress (not the priority)
+*    still a daily duty...
+
+- cron the rotation of step files and set up their storage
+*    still to be done ¤ 03/10/2001:01:11 ¤ moz ¤  
+
+- build another page to display user logs to administrators
+*    still to be done ¤ 03/10/2001:01:11 ¤ moz ¤  
+

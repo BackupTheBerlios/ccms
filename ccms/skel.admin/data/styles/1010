@@ -1,0 +1,22 @@
+
+<TITRE>
+Form Input Option Selected
+</TITRE>
+<REGEXP>
+\{=\*-[[:space:]]*([^-]*)[[:space:]]*-([^=]*)=\}
+</REGEXP>
+<OUTPUT>
+<option value=\"\\2\" selected> \\1
+</OUTPUT>
+<EXAMPLE>
+{=*- element -=}
+</EXAMPLE>
+<DESCRITION>
+Element sélectionné d'un menu déroulant
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

@@ -1,0 +1,32 @@
+<SKIN_fsearch>
+<br>&nbsp;&nbsp;<b>Recherchez sur l'ensemble du site:</b><br><br>
+<form action=/search.php method=post>
+<input type=text size=30 name=terms>&nbsp;
+<input type=submit value=Ok>
+</form>
+</SKIN_fsearch>
+<SKIN_nosearch>
+<br>&nbsp;&nbsp;<b>Désolé, aucun document ne correspond à votre recherche</b>
+</SKIN_nosearch>
+<SKIN_numsearch>
+<br>&nbsp;&nbsp;<b>([numres]) résultat(s) trouvé(s):</b><br>
+</SKIN_numsearch>
+<SKIN_listsearch>
+<br>
+<b>([tres]) [<a href="([ures])">([ures])</a>]:</b>
+<br>([cres])
+<br>
+</SKIN_listsearch>
+<SKIN_linksearch>
+<br>
+<form action=/search.php method=post>
+<input type=hidden name=terms value=([terms])>
+<input type=hidden name=start value=([nextstart])>
+<input type=submit value=Précédent>
+</form>
+<form action=/search.php method=post>
+<input type=hidden name=terms value=([terms])>
+<input type=hidden name=start value=([prevstart])>
+<input type=submit value=Suivant>
+</form>
+</SKIN_linksearch>

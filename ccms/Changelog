@@ -1,0 +1,57 @@
+# Changelog for CCMS
+# $Id: Changelog,v 1.1 2003/09/17 12:40:42 terraces Exp $
+# Copyright (C) 2001, 2002 Makina Corpus, http://makinacorpus.org
+# Created and maintained by mose <mose@makinacorpus.org>
+# Released under GPL version 2 or later see LICENSE file.
+# or http://www.gnu.org/copyleft/gpl.html
+
+20/09/2002 : r0.2b3
+[ alex & die ]
+Web-install updated and translated into english
+Ability to get special format for directories
+Updated contact/search & structure (skins->global)
+News skins (colored text, pop-ups ...)
+
+31/07/2002 : r0.2b2
+[ alex ]
+Updated web-install (checking web-server rights)
+Added contact form
+Changed search engine structure (using kind of skins)
+
+22/07/2002 : r0.2b1
+[ alex ]
+Added web-installer
+Added enobin hack to provide search engine
+Bugfixes
+
+19/06/2002 : r0.1b5
+[ alex & mastre ]
+Removed useless directories
+Removed system calls from workflow function
+Added user_functions
+Ability to get different _conf/ vars for the same content
+
+11/02/2002 : r0.1b4
+[ mose ]
+Burnt all gifs !!
+Cleaned some unused stuff from source
+Included workflow rudimentary manager
+Dealt with image and docs uploading and browsing
+
+07/01/2002 : r0.1b3
+[ mose ]
+more night action ...
+fixed test display and lib file
+fixed skins integration
+still a lot of things to fix
+
+06/01/2002 : r0.1b2
+[ mose ]
+One week of hard work...
+Major overhaul of backoffice layout
+Fixed History file, editing files, creating directories
+Changed data architecture to get more flexibility
+
+23/12/2001 : r0.1b1
+[ mose ]
+debugged mysql auth

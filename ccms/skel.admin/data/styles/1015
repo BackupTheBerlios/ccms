@@ -1,0 +1,22 @@
+
+<TITRE>
+Table End
+</TITRE>
+<REGEXP>
+}%
+</REGEXP>
+<OUTPUT>
+</td></tr></table>
+</OUTPUT>
+<EXAMPLE>
+}%
+</EXAMPLE>
+<DESCRITION>
+Fin de tableau a colonnes
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

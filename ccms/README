@@ -1,0 +1,53 @@
+CCMS: README
+------------------------------------------------------------------
+$Id: README,v 1.1 2003/09/17 12:40:44 terraces Exp $
+Copyright (C) 2001,2002 Makina Corpus, http://makinacorpus.org
+Created and maintained by mose <mose@makinacorpus.org>
+Released under GPL version 2 or later see LICENSE file
+or http://www.gnu.org/copyleft/gpl.html
+------------------------------------------------------------------
+
+CCMS is a Collaborative Content Management System, written in php
+as a web interface.
+
+The main goal of this tool is to open direct access to different
+levels of a website production, as well for web designer that
+content provider.
+
+Features
+--------
+- sortof XML style for file storages
+- fast training
+- authentication choice LDAP, MySQL or just File
+- multi-domain, multi-lingual, multi-sites management
+- full versionning, infinite undo.
+- pages generation uses a cache system
+- fully skinnable
+- search engine
+- contact form
+
+CCMS have been successfully used for a dozen different websites,
+but mostly with french users. Please be patient translation work
+is going on.
+
+
+Author
+------
+Mose is Internet Consultant in Makina Corpus, and develop 
+collaborative solutions since 1996. <mose@makina-corpus.org>
+
+Coders & Contributors
+---------------------
+Alexandre Passant is axp@makina-corpus.org, coded many things,
+he is developer in Makina Corpus (Paris).
+
+Diego Duchowney is die@makina-corpus.org, helped in translations,
+Documentation and debugging, he is consultant in Makina Corpus 
+(Madrid). 
+
+Djamel Kadi is dka@makina-corpus.org, helped in translation and
+documentation, he is technical consultant in Makina Corpus (Paris).
+
+Makina Corpus is a Free Software Service Company in Paris, London,
+Madrid, feel free to contact them if you need custom support.
+<contact@makina-corpus.com>

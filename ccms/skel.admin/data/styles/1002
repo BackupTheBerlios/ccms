@@ -1,0 +1,21 @@
+<TITRE>
+Form Input Hidden
+</TITRE>
+<REGEXP>
+:--[[:space:]]*([-_a-zA-Z]*)=([^[:space:]]*)[[:space:]]*--:
+</REGEXP>
+<OUTPUT>
+<input type=hidden name=\"out['\\1']\" value=\"\\2\">
+</OUTPUT>
+<EXAMPLE>
+:-- to=mose --:
+</EXAMPLE>
+<DESCRITION>
+hamps de formulaire invisible (le champs to est necessaire pour les formulaires de mail)
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

@@ -1,0 +1,34 @@
+<TITRE>
+Contact
+</TITRE>
+<CHAPEAU>
+Ce formulaire vous permet d'adresser un message aux administrateurs de ce site.
+</CHAPEAU>
+<CONTENU>
+/-- /contact.php --/
+:-- to=contact --:
+(-- nom=Votre nom -26-)
+(o-- email=*Votre Email* -26-)
+(o-- subject=*Sujet* -46-)
+[-- message=Message -42/6-]
+{o-= Les champs en rouge sont nécessaires. =-}
+/----/
+</CONTENU>
+<HTMLTITLE>
+Contact
+</HTMLTITLE>
+<DESCRIPTION>
+</DESCRIPTION>
+<MOTSCLE>
+</MOTSCLE>
+<FOOTER>
+</FOOTER>
+<LIENS>
+
+</LIENS>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

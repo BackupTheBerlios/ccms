@@ -1,0 +1,22 @@
+
+<TITRE>
+Form Input Select
+</TITRE>
+<REGEXP>
+\{(o?)==[[:space:]]*([^=]+)=([^=]*)[[:space:]]*==\}
+</REGEXP>
+<OUTPUT>
+<tr><td></tD><td><b class=good\\1>\\3</b></td></tr>\n<tr><td></tD><td><select name=\"out\\1['\\2']\">
+</OUTPUT>
+<EXAMPLE>
+{== question = menu ==}
+</EXAMPLE>
+<DESCRITION>
+debut de menu déroulant (obligatoire s'il y a un o, comme d'hab)
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

@@ -1,0 +1,21 @@
+<TITRE>
+Form Comment
+</TITRE>
+<REGEXP>
+\{(o?)-=[[:space:]]*([^=]*)[[:space:]]*=-\}
+</REGEXP>
+<OUTPUT>
+<tr><td></td><td><b class=good\\1>\\2</b><br></td></tr>\n
+</OUTPUT>
+<EXAMPLE>
+{-= texte libre =-}
+</EXAMPLE>
+<DESCRITION>
+Insertion d'une ligne de texte dans le tableau du formulaire (utile pour les champs radio). l'ajout d'un o rend le champs obligatoire.
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

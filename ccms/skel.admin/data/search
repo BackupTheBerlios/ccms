@@ -1,0 +1,31 @@
+<TITRE>
+Contact
+</TITRE>
+<CHAPEAU>
+Ce formulaire vous permet d'effectuer une recherche sur l'ensemble du site.
+</CHAPEAU>
+<CONTENU>
+/-- /search.php --/
+:-- num=10 --:
+:-- start=0 --:
+(-- terms=Rechercher -26-)
+/----/
+</CONTENU>
+<HTMLTITLE>
+Contact
+</HTMLTITLE>
+<DESCRIPTION>
+</DESCRIPTION>
+<MOTSCLE>
+</MOTSCLE>
+<FOOTER>
+</FOOTER>
+<LIENS>
+
+</LIENS>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

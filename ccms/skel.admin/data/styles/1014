@@ -1,0 +1,22 @@
+
+<TITRE>
+Table Vertical Split
+</TITRE>
+<REGEXP>
+-%-
+</REGEXP>
+<OUTPUT>
+</td><td>&nbsp;&nbsp;</td><td valign=top>
+</OUTPUT>
+<EXAMPLE>
+-%-
+</EXAMPLE>
+<DESCRITION>
+Séparation verticale de tableau a colonnes
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>

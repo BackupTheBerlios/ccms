@@ -1,0 +1,61 @@
+<CONTENU>
+# formulaires
+*:::"\n/--[[:space:]]*([^-]+)[[:space:]]*--/":::"<form action=\\1 method=post><table border=0>":::<b><tT>/-- /contact.php/cm_lang --/</tt></b><br>Début de formulaire, dont la destination est /contact.php/fr
+*:::":--[[:space:]]*([-_a-zA-Z]*)=([^[:space:]]*)[[:space:]]*--:":::"<input type=hidden name=\"out['\\1']\" value=\"\\2\">":::<b><tT>:-- to=mose --:</tt></b><br>Champs de formulaire invisible (le champs to est necessaire pour les formulaires de mail)
+*:::"\((o?)--[[:space:]]([a-zA-Z0-9]*)=([^=-]*)(=?([^-]*)?)[[:space:]]*-([0-9]*)-\)":::"<tr><td>\\3<br></td><td><input type=text name=\"out\\1['\\2']\" value=\"\\5\" size=\"\\6\"></td></tr>\n":::<tT>(-- Quelque chose --)</tt>> ou <tT>(o-- Quelque chose = valeur par défaut -42-)</tt><br>Champs texte simple, ou obligatoire, avec une valeur par defaut, et une longueur (en caractères)
+*:::"\[(o?)--[[:space:]]([a-zA-Z0-9]*)=*([-_a-zA-Z ]*)=?([^[:space:]]*)?[[:space:]]*-(([0-9]*)/([0-9]*))?-\]":::"<tr><td valign=top>\\3<br></td><td><textarea name=\"out\\1['\\2']\" cols=\\6 rows=\\7>\\4</textarea></td></tr>\n":::<tT>[-- Zone de saisie --]</tt> ou <tT>[o-- Zone de saisie = texte par défaut -42/8-]</tt><br>Zone de saisie de type textarea simple, ou obligatoire, avec valeur par défaut, sur 42 colonnes et 8 rangées
+*:::"\{(o?)-=[[:space:]]*([^=]*)[[:space:]]*=-\}":::"<tr><td></td><td><b class=good\\1>\\2</b><br></td></tr>\n":::<b><tT>{-= texte libre =-}</tt></b><br>Insertion d'une ligne de texte dans le tableau du formulaire (utile pour les champs radio). l'ajout d'un o rend le champs obligatoire, comme au dessus.
+*:::"\{(o?)--[[:space:]]*([-_a-zA-Z]*)=?([^[:space:]]*)?[[:space:]]*-([^-]*)-\}":::"<tr><td></td><td><input type=radio name=\"out\\1['\\2']\" value=\"\\4\">\\3<br></td></tr>\n":::<b><tT>{-- vote 1 = une question --}</tt></b><br>Champs radio, avec mot-clé de la question (vote 1) et réponse (une question). L'ajout d'un o en second caractere rend le champs obligatoire (la question, pas la réponse)
+*:::"\{(o?)-\*-[[:space:]]*([-_a-zA-Z]*)=?([^[:space:]]*)?[[:space:]]*-([^-]*)-\}":::"<tr><td></td><td><input type=radio name=\"out\\1['\\2']\" value=\"\\4\" checked>\\3<br></td></tr>\n":::<b><tT>{-*- vote 1 = une question --}</tt></b><br>Champs radio coché par défaut
+*:::"\{(o?)==[[:space:]]*([^=]+)=([^=]*)[[:space:]]*==\}":::"<tr><td></tD><td><b class=good\\1>\\3</b></td></tr>\n<tr><td></tD><td><select name=\"out\\1['\\2']\">":::<b><tT>{== question = menu ==}</tt></b><br>debut de menu déroulant (obligatoire s'il y a un o, comme d'hab)
+*:::"\{=-[[:space:]]*([^-]*)[[:space:]]*-([^=]*)=\}":::"<option value=\"\\2\"> \\1":::<b><tT>{=- element -=}</tt></b><br>Element de menu déroulant
+*:::"\{=\*-[[:space:]]*([^-]*)[[:space:]]*-([^=]*)=\}":::"<option value=\"\\2\" selected> \\1":::<b><tT>{=*- element -=}</tt></b><br>Element sélectionné d'un menu déroulant
+*:::"\{====\}":::"</select></td></tr>\n":::<b><tT>{====}</tt></b> ··· Fin de menu déroulant
+*:::"\n/-{2,}/":::"<tr><td></td><td><input type=reset value='$cm_startover'>&nbsp;<input type=submit value='$cm_send'></td></tr></table></form>":::<b><tT>/----/</tt></b><br>Boutons de validation et fin de formulaire, important pour fermer le tableau
+# tableaux
+*:::"%\{([0-9]+)":::"<table width=100% cellspacing=0 cellpadding=0 border=0><tr><td valign=top width=\\1%>":::<b><tT>%{</tt></b><br>Début de tableau a colonnes
+*:::"%\{":::"<table width=100% cellspacing=0 cellpadding=0 border=0><tr><td valign=top>":::<b><tT>%{</tt></b><br>Début de tableau a colonnes
+*:::"-%-":::"</td><td>&nbsp;&nbsp;</td><td valign=top>":::<b><tT>-%-</tt></b><br>Séparation verticale de tableau a colonnes
+*:::"-//-":::"</td></tr><tr><td valign=top>":::<b><tT>-//-</tt></b><br>Séparation horizontale de tableau a colonnes
+*:::"\}%":::"</td></tr></table>":::<b><tT>}%</tt></b><br>Fin de tableau a colonnes
+*:::"\n----([0-9]{1,2})\r":::"\n<table width=\\1% cellspacing=0 cellpadding=0 border=0><tr><td width=30><img src=/img/0.png width=1 height=1 hspace=0 vspace=0 border=0 alt=''></tD><td bgcolor=#445566><img src=img/0.png alt='' width=1 height=1 vspace=0 hspace=0 border=0></td></tr></table>\n":::<b><tT>----</tt></b><br>Séparateur horizontal coloré de la largeur de la page
+*:::"\n----\r":::"\n<table width=80% cellspacing=0 cellpadding=0 border=0><tr><td width=30><img src=/img/0.png width=1 height=1 hspace=0 vspace=0 border=0 alt=''></tD><td bgcolor=#336699><img src=img/0.png alt='' width=1 height=1 vspace=0 hspace=0 border=0></td></tr></table>\n":::<b><tT>----</tt></b><br>Séparateur horizontal coloré de la largeur de la page
+# mise en page
+*:::"\#\(([0-9]*)\)([^\*]*)\#":::"<font color=\\1>\\2</font>":::<b><tT>*quelque chose*</tt></b><br>Couleur hexa
+*:::"\*([^\*]*)\*":::"<b>\\1</b>":::<b><tT>*quelque chose*</tt></b><br>Gras
+*:::"°([^°]*)°":::"<i>\\1</i>":::<b><tT>°quelques mots°</tt></b><br>Italique
+*:::"\n\+([1-3])\+([^\r]*)\r":::"</div>\n<div class=head\\1>\\2</div>":::<b><tT>+2+ titre de chapitre</tt></b><br>Application des styles head1, head2 et head3 definis dans la feuille de style
+*:::"\n>>>":::"</div>\n<div class=bodyr>":::<b><tT>&gt;&gt;&gt;texte a droite</tt></b><br>Ferrage du texte a droite selon le style bodyr
+*:::"\n<<<":::"</div>\n<div class=bodyl>":::<b><tT>&lt;&lt;&lt;texte a gauche</tt></b><br>Ferrage du texte a gauche selon le style bodyl. necessaire apres un titre pour reprendre la taille normale du texte.
+*:::"\n===":::"</div>\n<div class=bodyc>":::<b><tT>===texte au centre</tt></b><br>Centrage du texte selon le style bodyc
+*:::"\n---->":::"\n<table cellspacing=0 cellpadding=1 border=0 width=100%><tr><td bgcolor=#556677><table border=0 cellspacing=0 cellpadding=10 width=100%><tr><td bgcolor=#FFFFFF>":::<b><tT>----&gt;</tt></b><br>Début d'encadré
+*:::"\n<----":::"\n</td></tr></table></td></tr></table>":::<b><tT>&lt;----</tt></b><br>Fin d'encadré
+*:::"\n=>":::"\n<ul>":::<b><tT>=&gt;</tt></b><br>Début de liste a puces
+*:::"\n<=":::"\n</ul>":::<b><tT>&lt;=</tt></b><br>Fin de liste a puces
+*:::"\n#>":::"\n<ol>":::<b><tT>#&gt;</tt></b><br>Début de liste numérique
+*:::"\n<#":::"\n</ol>":::<b><tT>&lt;#</tt></b><br>Fin de liste numérique
+*:::"\n- ([^\r\n]*)":::"\n<li class=list> \\1</li>":::<b><tT>- item de liste</tt></b><br>Item de liste (a puce ou numerique)
+*:::"\n= ([^\r\n]*)":::"\n<img src=/img/blue.png width=14 height=7 vspace=0 hspace=0 border=0 alt='-' align=baseline> \\1<br>":::<b><tT>= texte avec puce</tt></b><br>Texte avec puce osus forme d'image
+*:::"\n-> ([^\r\n]*)":::"\n<img src=/img/menu_fleche.png width=14 height=7 vspace=0 hspace=0 border=0 alt='-' align=baseline> \\1<br>":::<b><tT>-&gt; texte avec fleche</tt></b><br>Texte avec fleche
+*:::"\n_> ([^\r\n]*)":::"\n<img src=/img/tab.png width=14 height=7 vspace=0 hspace=0 border=0 alt='-' align=baseline> \\1<br>":::<b><tT>_&gt; texte avec tab</tt></b><br>Texte avec tabulation
+*:::"\[([0-9]+)\[([^]]*)\]\]":::"<a name=\\1>\\2</a>":::<b><tT>[12[en haut]]</tt></b><br>Ancre numero 12
+*:::"\[([^]]*)\]\[([0-9]*)\]":::"<a href=$PHP_SELF#\\2>\\1</a>":::<b><tT>[12][blah blah]</tt></b><br>Lien interne a la page, vers l'ancre 12
+*:::"\[([^]]*)\]\[(https?://|mailto:|/)([^]]*)\]":::"<a href=\\2\\3 class=ext>\\1</a>":::<b><tT>[intitulé][http://site.com]</tt></b> ou <b><tT>[intitulé][mailto:moi@site.com]</tt></b><br>Lien externe, vers un autre site ou une adresse email.
+*:::"\[([^]]*)\]\[>([^]/]*)\]":::"<a href=/long.php/fr/presse/dossier_content#\\2 target=dossier>\\1</a>":::<b><tT>[intitulé][>32]</tt></b><br>Lien spécial pour le dossier de presse.
+*:::"\[([^]]*)\]new\[([^]]*)\]":::"<a href=\\2 target=_blank>\\1</a>":::<b><tT>[intitulé][url]</tt></b><br>Lien dans une nouvelle fenetre.
+*:::"\[([^]]*)\]pop\/([0-9]*)\/([0-9]*)\[([^]]*)\]":::"<a href=# onclick=javascript:window.open('/index.php/\\4','','resizable=yes,width=\\2,height=\\3,status=no,menubar=no,scrollbars=yes');>\\1</a>":::<b><tT>[intitulé]pop/300/200[dir/file]</tt></b><br>Lien interne au site, vers le fichier file dans le dossier dir ouverture en pop-up de dimansion 300*200.
+*:::"\[([^]]*)\]\[([^]]*)\]":::"<a href=/index.php/\\2 target=_top>\\1</a>":::<b><tT>[intitulé][dir/file]</tt></b><br>Lien interne au site, vers le fichier file dans le dossier dir.
+*:::"\[([^]]*)\]\[([^]/]*)/([^]/]*)/([^]/]*)/([^]/]*)\]":::"<a href=/index.php/\\2/\\3/\\4/\\5 target=_top>\\1</a>":::<b><tT>[intitulé][dir/file]</tt></b><br>Lien interne au site, vers le fichier file dans le dossier dir.
+*:::"\{([^\}]*)\}<\{([^\}]*)\}":::"<img src='/\\1' border=0 align=left alt='\\2'>":::<b><tT>{img/logo.png}&lt;{contenu du alt}</tt></b><br>Inclusion d'une image calée a gauche
+*:::"\{([^\}]*)\}>\{([^\}]*)\}":::"<img src='/\\1' border=0 align=right alt='\\2'>":::<b><tT>{img/logo.png}&gt;{contenu du alt}</tt></b><br>Inclusion d'une image calée a droité
+*:::"\{([^\}]*)\}=\{([^\}]*)\}":::"</div><div align=center><img src='/\\1' border=0 align=top alt='\\2'></div><div class=bodyl>":::<b><tT>{img/logo.png}={contenu du alt}</tt></b><br>Inclusion d'une image centrée
+*:::"\+(\n|\r)":::"<br>\n":::<b><tT>texte et fin de ligne+</tt></b><br>Saut a la ligne
+*:::"\r\n--plan--\r\n":::"_plan":::<b><tt>--plan--</tt></b><br>Integration du plan du site
+*:::"\r\n\r\n":::"<br><br>\n":::<b><tT>( saut de ligne )</tt></b><br>Saut de paragraphe
+</CONTENU>
+<AUTEUR>
+moz
+</AUTEUR>
+<DATE>
+25/01/2002, 11h42
+</DATE>

@@ -1,0 +1,21 @@
+<TITRE>
+Form Begin
+</TITRE>
+<REGEXP>
+\n/--[[:space:]]*([^-]+)[[:space:]]*--/
+</REGEXP>
+<OUTPUT>
+<form action=\\1 method=post><table border=0>
+</OUTPUT>
+<EXAMPLE>
+/-- /contact.php/cm_lang --/
+</EXAMPLE>
+<DESCRITION>
+Début de formulaire, dont la destination est /contact.php/fr
+</DESCRITION>
+<AUTEUR>
+mose
+</AUTEUR>
+<DATE>
+08/11/2001, 12h07
+</DATE>
