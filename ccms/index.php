@@ -1,4 +1,4 @@
-<? /* $Id: index.php,v 1.1 2003/09/17 12:40:47 terraces Exp $
+<? /* $Id: index.php,v 1.2 2003/10/01 11:32:48 terraces Exp $
 Copyright (C) 2001, 2002, Makina Corpus, http://makinacorpus.org
 This file is a componenet of CCMS <http://makinacorpus.org/index.php/ccms>
 Created and maintained by mose (mose@makinacorpus.org)
@@ -384,7 +384,7 @@ _END_;
         wFile($apachea, "./etc/apache-admin.conf");
         wFile($apachet, "./etc/apache-test.conf");
         wFile($apache, "./etc/apache.conf");
-		wFile($hosts, "./etc/hosts");
+       	wFile($hosts, "./etc/hosts");
 
         $res[] = "$ap_inc1 $etcroot $ap_inc2";
         $res[] = "$ap_inc3 $cip' $ap_inc2";
@@ -396,29 +396,29 @@ _END_;
         foreach($dirs as $dir) {
         	mkdir("$adminroot/$dir", 0750);
         	if(is_dir("./skel.admin/$dir")) {
-				$dp = opendir("./skel.admin/$dir");
-	            while (($f = readdir($dp))!=false) {
-	                if(!is_dir("./skel.admin/$dir/$f")) {
-	                    copy("./skel.admin/$dir/$f","$adminroot/$dir/$f");
+    			$dp = opendir("./skel.admin/$dir");
+                while (($f = readdir($dp))!=false) {
+                    if(!is_dir("./skel.admin/$dir/$f")) {
+                        copy("./skel.admin/$dir/$f","$adminroot/$dir/$f");
 	  	            }
-    	        }
+                }
 	        }
-		}
+        }
         copy("./etc/params.php","$adminroot/inc/params.php");
-		symlink("$adminroot/inc/auth.$auth.php", "$adminroot/inc/auth.php");
+        symlink("$adminroot/inc/auth.$auth.php", "$adminroot/inc/auth.php");
         if ($auth=='file') {
             exec("$htpasswd -bc ./etc/users $plogin $ppasswd");
             $res[] = "$mod_file htpasswd $etcroot/users"; 
         } elseif ($auth=='mysql') {
-    		$db_link = mysql_connect($mhost, $mlogin, $mpasswd);
+            $db_link = mysql_connect($mhost, $mlogin, $mpasswd);
             if (!($db_link && mysql_select_db($mdbname))) {
 	           die("$no_db $mysql_error");
             }
-	        $create = "CREATE TABLE users (login  varchar(16) NOT NULL, passwd varchar(16) default NULL, flag tinyint(2) NOT NULL default '0', PRIMARY KEY  (login));";
-            $pass = crypt($bmpasswd);
-            $populate = "INSERT INTO into users (login, passwd, flag) values ($bmpasswd,$bmlogin, 1);";
-    		$result = mysql_query($create, $db_link);
-    		$result = mysql_query($populate, $db_link);
+            $create = "CREATE TABLE users (login  varchar(16) NOT NULL, passwd varchar(16) default NULL, flag tinyint(2) NOT NULL default '0', PRIMARY KEY  (login));";
+            $pass = crypt($bmpasswd,substr($bmpasswd,0,2));
+            $populate = "INSERT INTO users (`login`, `passwd`, `flag`) values ('$bmlogin','$pass', 1);";
+            $result = mysql_query($create, $db_link);
+            $result = mysql_query($populate, $db_link);
             mysql_close($db_link);  
         } elseif ($auth=='ldap') {
             $res[] = $set_ldap;
@@ -437,31 +437,30 @@ _END_;
         }
         mkdir($datadir, 0750);
         foreach($domains as $dom=>$v) {
-			foreach($dirs as $dir) {
-	            mkdir("$datadir/$dom/$dir", 0750);
-	        }        
-	        foreach($files as $file) {
-	            copy("$confroot/$file","$datadir/$dom/_conf/$file");
-	        }
-			$dp = opendir($imgroot);
-	        while (($f = readdir($dp))!=false) {
-	            if(!is_dir("$imgroot/$f")) {
-	                copy("$imgroot/$f","$datadir/$dom/_images/$f");
-	            }
-			}
-			foreach($langs as $lang=>$v) {
-	            foreach($dirs as $dir) {
-	                mkdir("$datadir/$dom/$lang/$dir", 0750);
-	            } 
-	            foreach(array('global','menu') as $file) {
-	                copy("$confroot/LANG/$file", "$datadir/$dom/$lang/_conf/$file");
-	            }
+            foreach($dirs as $dir) {
+                mkdir("$datadir/$dom/$dir", 0750);
+            }        
+            foreach($files as $file) {
+                copy("$confroot/$file","$datadir/$dom/_conf/$file");
+            }
+            $dp = opendir($imgroot);
+            while (($f = readdir($dp))!=false) {
+                if(!is_dir("$imgroot/$f")) {
+                    copy("$imgroot/$f","$datadir/$dom/_images/$f");
+                }
+            }
+            foreach($langs as $lang=>$v) {
+                foreach($dirs as $dir) {
+                    mkdir("$datadir/$dom/$lang/$dir", 0750);
+                } 
+                foreach(array('global','menu') as $file) {
+                    copy("$confroot/LANG/$file", "$datadir/$dom/$lang/_conf/$file");
+                }
                 copy("$dataroot/TEMPLATE", "$datadir/$dom/$lang/$deffile");
                 copy("$dataroot/contact", "$datadir/$dom/$lang/contact");
                 copy("$dataroot/search", "$datadir/$dom/$lang/search");
-   		    }  
- 
-		}
+   	        }  
+        }
 		
         // Install test web
         mkdir($testroot, 0750);
